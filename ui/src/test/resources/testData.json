@@ -1,0 +1,120 @@
+{
+  "user": [
+    {
+      "countries": "US",
+      "firstName": "aldoTest",
+      "lastName": "aldoTest",
+      "emailAddress": "aldoonemoreacctest@gmail.com",
+      "password": "1q2w3e4rAA",
+      "address": "725 5th Ave",
+      "address2": "725 5th Ave",
+      "company": "Aldo Group",
+      "city": "New-York",
+      "state": "NY",
+      "zip": "10022",
+      "phoneFirstField": "1111111111",
+      "phoneSecondField": "4343",
+      "phoneThirdField": "2343",
+      "phoneExtField": "12345",
+      "gender":"MALE",
+      "dayOfBirth": "14",
+      "monthOfBirth": "9",
+      "yearOfBirth": "1933",
+      "userMailForPasswordRecovering": "zz4191011art@gmail.com",
+      "facebookUser": "aldoonemoreacctest@gmail.com",
+      "facebookPassword": "1q2w3e4rAA"
+    },
+    {
+      "countries": "CA",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "aldoonemoreacctest@gmail.com",
+      "password": "1q2w3e4rAA",
+      "address":  "William Street, New York, NY, USA",
+      "address2": "5221 Yonge St",
+      "company": "Aldo Group",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10038",
+      "phoneFirstField": "1111111111",
+      "phoneSecondField": "5687",
+      "phoneThirdField": "8908",
+      "phoneExtField": "56789",
+      "gender":"FEMALE",
+      "dayOfBirth": "12121980",
+      "monthOfBirth": "12",
+      "yearOfBirth": "1969",
+      "userMailForPasswordRecovering": "zz4191011art@gmail.com",
+      "facebookUser": "aldoonemoreacctest@gmail.com",
+      "facebookPassword": "1q2w3e4rAA"
+    }
+  ],
+  "address": [
+    {
+      "countries": "CA",
+      "searchPostCode": "H4R 1Y8",
+      "street": "201 1st Street West",
+      "city": "Saskatoon",
+      "province": "SK",
+      "phoneFirstField": "1111111111",
+      "postCode": "M6A 2T9"
+    },
+    {
+      "countries": "US",
+      "searchPostCode": "10022",
+      "street": "515 Christiana Mall Road",
+      "city": "Newark",
+      "province": "DE",
+      "phoneFirstField": "1111111111",
+      "postCode": "19702"
+    }
+  ],
+  "creditCard": [
+    {
+      "countries": "CA, US",
+      "type": "Visa",
+      "number": "4111111111111111",
+      "exMonth": "11",
+      "exYear": "20",
+      "cvc": "123"
+    },
+    {
+      "countries": "CA, US",
+      "type": "Mastercard",
+      "number": "2223000148400010",
+      "exMonth": "12",
+      "exYear": "2025",
+      "cvc": "123"
+    }
+  ],
+  "payPal": [
+    {
+      "countries": "CA",
+      "email": "customerone@hotmail.ca",
+      "password": "aldo1aldo"
+    },
+    {
+      "countries": "US",
+      "email": "customersix@hotmail.ca",
+      "password": "aldo1aldo"
+    }
+  ],
+  "visaCheckoutAccount": [
+    {
+      "countries": "CA",
+      "email": "ALDOCAEN@gmail.com",
+      "password": "Aldo123",
+      "firstName": "ALDO-QA",
+      "lastName": "QA-test",
+      "street": "6825 rue Biarritz",
+      "postCode": "J4Z2A1",
+      "city": "Brossard QC",
+      "cardNumber": "4111 1111 1111 1111"
+    }
+  ],
+  "interac": [
+    {
+      "idebitTrack2": "*****************"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke tests Suite">
+    <listeners>
+        <listener class-name="core.annotations.TransformerListener"/>
+        <listener class-name="core.AlterSuiteListenerGlobo"/>
+    </listeners>
+
+
+
+    <test name="Visit each banner tests">
+        <packages>
+            <package name="smoke.banner.*"/>
+        </packages>
+    </test>
+
+    <test name="Language check tests">
+        <packages>
+            <package name="smoke.languagecheck.*"/>
+        </packages>
+    </test>
+
+    <test name="Log In tests">
+        <packages>
+            <package name="smoke.login.*"/>
+        </packages>
+    </test>
+
+    <test name="Payments for authorized user">
+    <packages>
+        <package name="smoke.payment.autorizeduserpayments.*"/>
+    </packages>
+    </test>
+
+    <test name="Payments for unauthorized user">
+        <packages>
+            <package name="smoke.payment.notautorizeduserpayments.*"/>
+        </packages>
+    </test>
+
+
+    <test name="Add to bag tests">
+        <packages>
+            <package name="smoke.addtobag.*"/>
+        </packages>
+    </test>
+
+    <test name="Saved  payments">
+        <packages>
+            <package name="smoke.payment.savedpayments.*"/>
+        </packages>
+    </test>
+
+   <test name="Actions with product">
+        <packages>
+            <package name="smoke.actionswithproducts.*"/>
+        </packages>
+    </test>
+
+        <test name="Solar search">
+            <packages>
+                <package name="smoke.search.*"/>
+            </packages>
+        </test>
+
+        <test name="Promo codes and taxes">
+            <packages>
+                <package name="smoke.promo.*"/>
+            </packages>
+        </test>
+
+    <test name="Shipping and fields length validation">
+        <packages>
+            <package name="smoke.shipping.*"/>
+        </packages>
+    </test>
+
+    <test name="Find in store tests">
+        <packages>
+            <package name="smoke.storecheck.*"/>
+        </packages>
+    </test>
+
+    <test name="Total and sub-total prices tests">
+        <packages>
+            <package name="smoke.totalsubtotaltest.*"/>
+        </packages>
+    </test>
+
+    <test name="Track order tests">
+        <packages>
+            <package name="smoke.trackorder.*"/>
+        </packages>
+    </test>
+
+    <test name="Filter tests">
+        <packages>
+            <package name="smoke.filter.*"/>
+        </packages>
+    </test>
+
+    <test name="Wish list tests">
+        <packages>
+            <package name="smoke.wishlist.*"/>
+        </packages>
+    </test>
+
+</suite>

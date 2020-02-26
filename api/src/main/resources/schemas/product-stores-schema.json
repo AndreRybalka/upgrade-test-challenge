@@ -1,0 +1,207 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "boundEastLongitude",
+    "boundNorthLatitude",
+    "boundSouthLatitude",
+    "boundWestLongitude",
+    "pagination",
+    "sourceLatitude",
+    "sourceLongitude"
+  ],
+  "properties": {
+    "boundEastLongitude": {
+      "type": "number"
+    },
+    "boundNorthLatitude": {
+      "type": "number"
+    },
+    "boundSouthLatitude": {
+      "type": "number"
+    },
+    "boundWestLongitude": {
+      "type": "number"
+    },
+    "pagination": {
+      "type": "object",
+      "required": [
+        "currentPage",
+        "pageSize",
+        "totalPages",
+        "totalResults"
+      ],
+      "properties": {
+        "currentPage": {
+          "type": "integer"
+        },
+        "pageSize": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "totalResults": {
+          "type": "integer"
+        }
+      }
+    },
+    "sourceLatitude": {
+      "type": "number"
+    },
+    "sourceLongitude": {
+      "type": "number"
+    },
+    "stores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "address",
+          "displayName",
+          "estimatedDaysForDelivery",
+          "features",
+          "formattedDistance",
+          "geoPoint",
+          "name",
+          "onlineStore",
+          "openingHours",
+          "shipToStore",
+          "stockLevelStatus",
+          "stockLevelStatusFlag",
+          "url"
+        ],
+        "properties": {
+          "address": {
+            "type": "object",
+            "required": [
+              "country",
+              "defaultAddress",
+              "formattedAddress",
+              "id",
+              "line1",
+              "shippingAddress",
+              "town",
+              "visibleInAddressBook"
+            ],
+            "properties": {
+              "country": {
+                "type": "object",
+                "required": [
+                  "isocode",
+                  "name"
+                ],
+                "properties": {
+                  "isocode": {
+                    "type": "string",
+                    "pattern": "^(.*)$"
+                  },
+                  "name": {
+                    "type": "string",
+                    "pattern": "^(.*)$"
+                  }
+                }
+              },
+              "defaultAddress": {
+                "type": "boolean"
+              },
+              "formattedAddress": {
+                "type": "string",
+                "pattern": "^(.*)$"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^(.*)$"
+              },
+              "line1": {
+                "type": "string",
+                "pattern": "^(.*)$"
+              },
+
+              "shippingAddress": {
+                "type": "boolean"
+              },
+              "town": {
+                "type": "string",
+                "pattern": "^(.*)$"
+              },
+              "visibleInAddressBook": {
+                "type": "boolean"
+              }
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "estimatedDaysForDelivery": {
+            "type": "integer"
+          },
+          "features": {
+            "type": "object"
+          },
+          "formattedDistance": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "geoPoint": {
+            "type": "object",
+            "required": [
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "onlineStore": {
+            "type": "boolean"
+          },
+          "openingHours": {
+            "type": "object",
+            "required": [
+              "code",
+              "weekDayOpeningList"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "pattern": "^(.*)$"
+              },
+              "weekDayOpeningList": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "shipToStore": {
+            "type": "boolean"
+          },
+          "stockLevelStatus": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "stockLevelStatusFlag": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

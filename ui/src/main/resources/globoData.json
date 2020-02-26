@@ -1,0 +1,130 @@
+{
+    "user": [
+      {
+        "email": "autestermail@yopmail.com",
+        "firstName": "Valeriy",
+        "lastName": "Kolodochka",
+        "password": "aldo4321Group",
+        "gender": "MALE",
+        "language": "EN"
+      }
+    ],
+    "shippingAddress": [
+      {
+        "email": "autestermail@yopmail.com",
+        "firstName": "Valeriy",
+        "lastName": "Kolodochka",
+        "password": "aldo4321Group",
+        "gender": "MALE",
+        "language": "EN"
+      }
+    ],
+    "store": [
+      {
+        "countries": "CA",
+        "searchPostCode": "S7K 0V1",
+        "street": "201 1st Street West",
+        "city": "Saskatoon",
+        "province": "SK",
+        "postCode": "S7K 1J9"
+      },
+      {
+        "countries": "US",
+        "searchPostCode": "19804",
+        "street": "515 Christiana Mall Road",
+        "city": "Newark",
+        "province": "DE",
+        "postCode": "19702"
+      },
+      {
+        "countries": "UK",
+        "searchPostCode": "W11 3SJ",
+        "street": "Ariel Way",
+        "city": "London",
+        "province": "null",
+        "postCode": "W12 7GF"
+      }
+    ],
+    "creditCard": [
+      {
+        "countries": "CA, US, UK, EU",
+        "type": "VISA",
+        "number": "4111111111111111",
+        "exMonth": "11",
+        "exYear": "20",
+        "cvc": "123"
+      },
+      {
+        "countries": "CA, US",
+        "type": "AMEX",
+        "number": "378282246310005",
+        "exMonth": "11",
+        "exYear": "20",
+        "cvc": "1234"
+      },
+      {
+        "countries": "CA, US",
+        "type": "DISCOVER",
+        "number": "6011111111111117",
+        "exMonth": "11",
+        "exYear": "20",
+        "cvc": "123"
+      },
+      {
+        "countries": "CA, US, UK, EU",
+        "type": "MASTER",
+        "number": "5555555555554444",
+        "exMonth": "11",
+        "exYear": "20",
+        "cvc": "123"
+      },
+      {
+        "countries": "UK, EU",
+        "type": "MAESTRO",
+        "number": "5641821111166669",
+        "exMonth": "11",
+        "exYear": "20",
+        "cvc": "123"
+      }
+    ],
+    "payPal": [
+      {
+        "countries": "CA",
+        "email": "customerone@hotmail.ca",
+        "password": "aldo1aldo"
+      },
+      {
+        "countries": "US",
+        "email": "customerfive@hotmail.ca",
+        "password": "aldo1aldo"
+      },
+      {
+        "countries": "UK",
+        "email": "customernine@hotmail.ca",
+        "password": "aldo1aldo"
+      },
+      {
+        "countries": "EU",
+        "email": "customernine@hotmail.ca",
+        "password": "aldo1aldo"
+      }
+    ],
+    "visaCheckoutAccount": [
+      {
+        "countries": "CA",
+        "email": "ALDOCAEN@gmail.com",
+        "password": "Aldo123",
+        "firstName": "ALDO-QA",
+        "lastName": "QA-test",
+        "street": "6825 rue Biarritz",
+        "postCode": "J4Z2A1",
+        "city": "Brossard QC",
+        "cardNumber": "4111 1111 1111 1111"
+      }
+    ],
+    "interac": [
+      {
+        "idebitTrack2": "3728024906540591206=01121122334455000"
+      }
+    ]
+}

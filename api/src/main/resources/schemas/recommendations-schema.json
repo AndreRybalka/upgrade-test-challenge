@@ -1,0 +1,201 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "orderRecommendations",
+    "items",
+    "hasStyleFromOrder"
+  ],
+  "properties": {
+    "orderRecommendations": {
+      "$id": "#/properties/orderRecommendations",
+      "type": "object",
+      "title": "The Orderrecommendations Schema",
+      "required": [
+        "product",
+        "productReferences"
+      ],
+      "properties": {
+        "product": {
+          "$id": "#/properties/orderRecommendations/properties/product",
+          "type": "null",
+          "title": "The Product Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "productReferences": {
+          "$id": "#/properties/orderRecommendations/properties/productReferences",
+          "type": "array",
+          "title": "The Productreferences Schema"
+        }
+      }
+    },
+    "items": {
+      "$id": "#/properties/items",
+      "type": "array",
+      "title": "The Items Schema",
+      "items": {
+        "$id": "#/properties/items/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "likes",
+          "sources",
+          "photoLink",
+          "username",
+          "products",
+          "styleId",
+          "productId"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/items/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "04c0ad62-ff55-41b4-983e-18794b611860"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "likes": {
+            "$id": "#/properties/items/items/properties/likes",
+            "type": "integer",
+            "title": "The Likes Schema",
+            "default": 0,
+            "examples": [
+              275
+            ]
+          },
+          "sources": {
+            "$id": "#/properties/items/items/properties/sources",
+            "type": "array",
+            "title": "The Sources Schema",
+            "items": {
+              "$id": "#/properties/items/items/properties/sources/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "media",
+                "srcSet"
+              ],
+              "properties": {
+                "media": {
+                  "$id": "#/properties/items/items/properties/sources/items/properties/media",
+                  "type": "string",
+                  "title": "The Media Schema",
+                  "default": "",
+                  "examples": [
+                    "default"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "srcSet": {
+                  "$id": "#/properties/items/items/properties/sources/items/properties/srcSet",
+                  "type": "object",
+                  "title": "The Srcset Schema",
+                  "required": [
+                    "x1",
+                    "x2"
+                  ],
+                  "properties": {
+                    "x1": {
+                      "$id": "#/properties/items/items/properties/sources/items/properties/srcSet/properties/x1",
+                      "type": "string",
+                      "title": "The X1 Schema",
+                      "default": "",
+                      "examples": [
+                        "//d28m5bx785ox17.cloudfront.net/v1/img/03uRF31Y3NtjWocsacrWHpDP8tOgySS3HuwM1-m6Oe0=/sc/600x600?spatialTags=0.608702:0.548069"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "x2": {
+                      "$id": "#/properties/items/items/properties/sources/items/properties/srcSet/properties/x2",
+                      "type": "string",
+                      "title": "The X2 Schema",
+                      "default": "",
+                      "examples": [
+                        "//d28m5bx785ox17.cloudfront.net/v1/img/03uRF31Y3NtjWocsacrWHpDP8tOgySS3HuwM1-m6Oe0=/sc/1080x1080?spatialTags=0.608702:0.548069"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "photoLink": {
+            "$id": "#/properties/items/items/properties/photoLink",
+            "type": "string",
+            "title": "The Photolink Schema",
+            "default": "",
+            "examples": [
+              "https://www.instagram.com/p/Bq_EX_YAfQ5/"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "username": {
+            "$id": "#/properties/items/items/properties/username",
+            "type": "string",
+            "title": "The Username Schema",
+            "default": "",
+            "examples": [
+              "@shellystuckman"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "products": {
+            "$id": "#/properties/items/items/properties/products",
+            "type": "array",
+            "title": "The Products Schema",
+            "items": {
+              "$id": "#/properties/items/items/properties/products/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "58551382-96"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "styleId": {
+            "$id": "#/properties/items/items/properties/styleId",
+            "type": "string",
+            "title": "The Styleid Schema",
+            "default": "",
+            "examples": [
+              "s_698_520684295d188983768e34fba20fd6ebec699e789ec2f34a43d2b17aff3c515b"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "productId": {
+            "$id": "#/properties/items/items/properties/productId",
+            "type": "string",
+            "title": "The Productid Schema",
+            "default": "",
+            "examples": [
+              "58551382"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "hasStyleFromOrder": {
+      "$id": "#/properties/hasStyleFromOrder",
+      "type": "boolean",
+      "title": "The Hasstylefromorder Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    }
+  }
+}

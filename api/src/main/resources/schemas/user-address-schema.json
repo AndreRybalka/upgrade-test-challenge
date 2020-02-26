@@ -1,0 +1,251 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "newAddressId",
+    "addresses"
+  ],
+  "properties": {
+    "newAddressId": {
+      "$id": "#/properties/newAddressId",
+      "type": "string",
+      "title": "The Newaddressid Schema",
+      "default": "",
+      "examples": [
+        "10300621094935"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "addresses": {
+      "$id": "#/properties/addresses",
+      "type": "array",
+      "title": "The Addresses Schema",
+      "items": {
+        "$id": "#/properties/addresses/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "country",
+          "defaultAddress",
+          "extension",
+          "firstName",
+          "formattedAddress",
+          "id",
+          "lastName",
+          "line1",
+          "phone",
+          "postalCode",
+          "shippingAddress",
+          "town",
+          "visibleInAddressBook"
+        ],
+        "properties": {
+          "country": {
+            "$id": "#/properties/addresses/items/properties/country",
+            "type": "object",
+            "title": "The Country Schema",
+            "required": [
+              "isocode",
+              "name"
+            ],
+            "properties": {
+              "isocode": {
+                "$id": "#/properties/addresses/items/properties/country/properties/isocode",
+                "type": "string",
+                "title": "The Isocode Schema",
+                "default": "",
+                "examples": [
+                  "CA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/addresses/items/properties/country/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "Canada"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "defaultAddress": {
+            "$id": "#/properties/addresses/items/properties/defaultAddress",
+            "type": "boolean",
+            "title": "The Defaultaddress Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "extension": {
+            "$id": "#/properties/addresses/items/properties/extension",
+            "type": "string",
+            "title": "The Extension Schema",
+            "default": "",
+            "examples": [
+              "123"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "firstName": {
+            "$id": "#/properties/addresses/items/properties/firstName",
+            "type": "string",
+            "title": "The Firstname Schema",
+            "default": "",
+            "examples": [
+              "aldoTest"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "formattedAddress": {
+            "$id": "#/properties/addresses/items/properties/formattedAddress",
+            "type": "string",
+            "title": "The Formattedaddress Schema",
+            "default": "",
+            "examples": [
+              "709 Dufferin Street, Ontario, Toronto, M6K 2B6"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "id": {
+            "$id": "#/properties/addresses/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "10300621094935"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "lastName": {
+            "$id": "#/properties/addresses/items/properties/lastName",
+            "type": "string",
+            "title": "The Lastname Schema",
+            "default": "",
+            "examples": [
+              "aldoTest"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "line1": {
+            "$id": "#/properties/addresses/items/properties/line1",
+            "type": "string",
+            "title": "The Line1 Schema",
+            "default": "",
+            "examples": [
+              "709 Dufferin Street"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "phone": {
+            "$id": "#/properties/addresses/items/properties/phone",
+            "type": "string",
+            "title": "The Phone Schema",
+            "default": "",
+            "examples": [
+              "1111111111"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "postalCode": {
+            "$id": "#/properties/addresses/items/properties/postalCode",
+            "type": "string",
+            "title": "The Postalcode Schema",
+            "default": "",
+            "examples": [
+              "M6K 2B6"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "region": {
+            "$id": "#/properties/addresses/items/properties/region",
+            "type": "object",
+            "title": "The Region Schema",
+            "required": [
+              "countryIso",
+              "isocode",
+              "isocodeShort",
+              "name"
+            ],
+            "properties": {
+              "countryIso": {
+                "$id": "#/properties/addresses/items/properties/region/properties/countryIso",
+                "type": "string",
+                "title": "The Countryiso Schema",
+                "default": "",
+                "examples": [
+                  "CA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isocode": {
+                "$id": "#/properties/addresses/items/properties/region/properties/isocode",
+                "type": "string",
+                "title": "The Isocode Schema",
+                "default": "",
+                "examples": [
+                  "CA-ON"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isocodeShort": {
+                "$id": "#/properties/addresses/items/properties/region/properties/isocodeShort",
+                "type": "string",
+                "title": "The Isocodeshort Schema",
+                "default": "",
+                "examples": [
+                  "ON"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/addresses/items/properties/region/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "Ontario"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "shippingAddress": {
+            "$id": "#/properties/addresses/items/properties/shippingAddress",
+            "type": "boolean",
+            "title": "The Shippingaddress Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "town": {
+            "$id": "#/properties/addresses/items/properties/town",
+            "type": "string",
+            "title": "The Town Schema",
+            "default": "",
+            "examples": [
+              "Toronto"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "visibleInAddressBook": {
+            "$id": "#/properties/addresses/items/properties/visibleInAddressBook",
+            "type": "boolean",
+            "title": "The Visibleinaddressbook Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "orders",
+    "totalCount"
+  ],
+  "properties": {
+    "orders": {
+      "$id": "#/properties/orders",
+      "type": "array",
+      "title": "The Orders Schema",
+      "items": {
+        "$id": "#/properties/orders/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "code",
+          "deliveryMode",
+          "placed",
+          "status"
+        ],
+        "properties": {
+          "code": {
+            "$id": "#/properties/orders/items/properties/code",
+            "type": "string",
+            "title": "The Code Schema",
+            "default": "",
+            "examples": [
+              "100734799"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "deliveryMode": {
+            "$id": "#/properties/orders/items/properties/deliveryMode",
+            "type": "string",
+            "title": "The Deliverymode Schema",
+            "default": "",
+            "examples": [
+              "aldo-ups-free-ship-to-store-net"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "placed": {
+            "$id": "#/properties/orders/items/properties/placed",
+            "type": "string",
+            "title": "The Placed Schema",
+            "default": "",
+            "examples": [
+              "2018-12-13T22:21:08-0500"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "status": {
+            "$id": "#/properties/orders/items/properties/status",
+            "type": "string",
+            "title": "The Status Schema",
+            "default": "",
+            "examples": [
+              "SHIPMENT_IN_PROCESS"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "totalCount": {
+      "$id": "#/properties/totalCount",
+      "type": "integer",
+      "title": "The Totalcount Schema",
+      "default": 0,
+      "examples": [
+        100
+      ]
+    }
+  }
+}

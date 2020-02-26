@@ -1,0 +1,135 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "products"
+  ],
+  "properties": {
+    "products": {
+      "type": "array",
+      "title": "The Products Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "baseProduct",
+          "clearance",
+          "code",
+          "colourGroupName",
+          "description",
+          "gender",
+          "giftCard",
+          "isGenderNeutral",
+          "name",
+          "newArrival",
+          "numberOfReviews",
+          "onlineExclusive",
+          "outlet",
+          "productMessage",
+          "purchasable",
+          "sale",
+          "sizeChartID",
+          "url"
+        ],
+        "properties": {
+          "baseProduct": {
+            "type": "string",
+            "title": "The Baseproduct Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "clearance": {
+            "type": "boolean",
+            "title": "The Clearance Schema"
+          },
+          "code": {
+            "type": "string",
+            "title": "The Code Schema"
+          },
+          "colourGroupName": {
+            "type": "string",
+            "title": "The Colourgroupname Schema",
+            "default": ""
+          },
+          "description": {
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "gender": {
+            "type": "string",
+            "title": "The Gender Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "giftCard": {
+            "type": "boolean",
+            "title": "The Giftcard Schema",
+            "default": false
+          },
+          "isGenderNeutral": {
+            "type": "boolean",
+            "title": "The Isgenderneutral Schema",
+            "default": false
+          },
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "newArrival": {
+            "type": "boolean",
+            "title": "The Newarrival Schema",
+            "default": false
+          },
+          "numberOfReviews": {
+            "type": "integer",
+            "title": "The Numberofreviews Schema",
+            "default": 0
+          },
+          "onlineExclusive": {
+            "type": "boolean",
+            "title": "The Onlineexclusive Schema",
+            "default": false
+          },
+          "outlet": {
+            "type": "boolean",
+            "title": "The Outlet Schema",
+            "default": false
+          },
+          "productMessage": {
+            "type": "object",
+            "title": "The Productmessage Schema"
+          },
+          "purchasable": {
+            "type": "boolean",
+            "title": "The Purchasable Schema",
+            "default": false
+          },
+          "sale": {
+            "type": "boolean",
+            "title": "The Sale Schema",
+            "default": false
+          },
+          "sizeChartID": {
+            "type": "string",
+            "title": "The Sizechartid Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "url": {
+            "type": "string",
+            "title": "The Url Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

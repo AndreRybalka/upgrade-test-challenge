@@ -1,0 +1,1730 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "orderDetails"
+  ],
+  "properties": {
+    "orderDetails": {
+      "$id": "#/properties/orderDetails",
+      "type": "object",
+      "title": "The Orderdetails Schema",
+      "required": [
+        "hybrisOrderDetails",
+        "omsOrderDetails",
+        "orderNumber",
+        "pickUpStoreDetails"
+      ],
+      "properties": {
+        "hybrisOrderDetails": {
+          "$id": "#/properties/orderDetails/properties/hybrisOrderDetails",
+          "type": "object",
+          "title": "The Hybrisorderdetails Schema",
+          "required": [
+            "deliveryAddress",
+            "entries",
+            "paymentInfo",
+            "subTotal",
+            "totalPrice",
+            "totalPriceWithTax",
+            "totalTax"
+          ],
+          "properties": {
+            "deliveryAddress": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress",
+              "type": "object",
+              "title": "The Deliveryaddress Schema",
+              "required": [
+                "country",
+                "defaultAddress",
+                "line1",
+                "postalCode",
+                "shippingAddress",
+                "town",
+                "visibleInAddressBook"
+              ],
+              "properties": {
+                "country": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/country",
+                  "type": "object",
+                  "title": "The Country Schema",
+                  "required": [
+                    "isocode",
+                    "name"
+                  ],
+                  "properties": {
+                    "isocode": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/country/properties/isocode",
+                      "type": "string",
+                      "title": "The Isocode Schema",
+                      "default": "",
+                      "examples": [
+                        "CA"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "name": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/country/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "Canada"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                },
+                "defaultAddress": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/defaultAddress",
+                  "type": "boolean",
+                  "title": "The Defaultaddress Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                },
+                "line1": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/line1",
+                  "type": "string",
+                  "title": "The Line1 Schema",
+                  "default": "",
+                  "examples": [
+                    " College Street"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "postalCode": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/postalCode",
+                  "type": "string",
+                  "title": "The Postalcode Schema",
+                  "default": "",
+                  "examples": [
+                    "S7K 0V1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "shippingAddress": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/shippingAddress",
+                  "type": "boolean",
+                  "title": "The Shippingaddress Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "town": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/town",
+                  "type": "string",
+                  "title": "The Town Schema",
+                  "default": "",
+                  "examples": [
+                    "Toronto"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "visibleInAddressBook": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/deliveryAddress/properties/visibleInAddressBook",
+                  "type": "boolean",
+                  "title": "The Visibleinaddressbook Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                }
+              }
+            },
+            "entries": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries",
+              "type": "array",
+              "title": "The Entries Schema",
+              "items": {
+                "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                  "basePrice",
+                  "entryNumber",
+                  "product",
+                  "quantity",
+                  "totalPrice",
+                  "updateable"
+                ],
+                "properties": {
+                  "basePrice": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/basePrice",
+                    "type": "object",
+                    "title": "The Baseprice Schema",
+                    "required": [
+                      "currencyIso",
+                      "formattedValue",
+                      "priceType",
+                      "value"
+                    ],
+                    "properties": {
+                      "currencyIso": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/basePrice/properties/currencyIso",
+                        "type": "string",
+                        "title": "The Currencyiso Schema",
+                        "default": "",
+                        "examples": [
+                          "CAD"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "formattedValue": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/basePrice/properties/formattedValue",
+                        "type": "string",
+                        "title": "The Formattedvalue Schema",
+                        "default": "",
+                        "examples": [
+                          "$36.98"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "priceType": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/basePrice/properties/priceType",
+                        "type": "string",
+                        "title": "The Pricetype Schema",
+                        "default": "",
+                        "examples": [
+                          "BUY"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "value": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/basePrice/properties/value",
+                        "type": "number",
+                        "title": "The Value Schema",
+                        "default": 0.0,
+                        "examples": [
+                          36.98
+                        ]
+                      }
+                    }
+                  },
+                  "entryNumber": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/entryNumber",
+                    "type": "integer",
+                    "title": "The Entrynumber Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "product": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product",
+                    "type": "object",
+                    "title": "The Product Schema",
+                    "required": [
+                      "baseOptions",
+                      "baseProduct",
+                      "clearance",
+                      "code",
+                      "colourGroupName",
+                      "colourId",
+                      "giftCard",
+                      "name",
+                      "onlineExclusive",
+                      "outlet",
+                      "purchasable",
+                      "sale",
+                      "storeID",
+                      "url"
+                    ],
+                    "properties": {
+                      "baseOptions": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions",
+                        "type": "array",
+                        "title": "The Baseoptions Schema",
+                        "items": {
+                          "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "selected",
+                            "variantType"
+                          ],
+                          "properties": {
+                            "selected": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected",
+                              "type": "object",
+                              "title": "The Selected Schema",
+                              "required": [
+                                "code",
+                                "priceData",
+                                "stock",
+                                "url",
+                                "variantOptionQualifiers"
+                              ],
+                              "properties": {
+                                "code": {
+                                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/code",
+                                  "type": "string",
+                                  "title": "The Code Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "49123829"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "priceData": {
+                                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/priceData",
+                                  "type": "object",
+                                  "title": "The Pricedata Schema",
+                                  "required": [
+                                    "currencyIso",
+                                    "formattedValue",
+                                    "priceType",
+                                    "value"
+                                  ],
+                                  "properties": {
+                                    "currencyIso": {
+                                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/priceData/properties/currencyIso",
+                                      "type": "string",
+                                      "title": "The Currencyiso Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "CAD"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "formattedValue": {
+                                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/priceData/properties/formattedValue",
+                                      "type": "string",
+                                      "title": "The Formattedvalue Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "$36.98"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "priceType": {
+                                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/priceData/properties/priceType",
+                                      "type": "string",
+                                      "title": "The Pricetype Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "BUY"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "value": {
+                                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/priceData/properties/value",
+                                      "type": "number",
+                                      "title": "The Value Schema",
+                                      "default": 0.0,
+                                      "examples": [
+                                        36.98
+                                      ]
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/url",
+                                  "type": "string",
+                                  "title": "The Url Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "/Women/Handbags/Crossbody-bags/Lousana/p/49123829"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "variantOptionQualifiers": {
+                                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers",
+                                  "type": "array",
+                                  "title": "The Variantoptionqualifiers Schema",
+                                  "items": {
+                                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",
+                                    "required": [
+                                      "img",
+                                      "name",
+                                      "qualifier",
+                                      "value"
+                                    ],
+                                    "properties": {
+                                      "img": {
+                                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers/items/properties/img",
+                                        "type": "object",
+                                        "title": "The Img Schema"
+                                      },
+                                      "name": {
+                                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers/items/properties/name",
+                                        "type": "string",
+                                        "title": "The Name Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "Colour"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "qualifier": {
+                                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers/items/properties/qualifier",
+                                        "type": "string",
+                                        "title": "The Qualifier Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "colour"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "value": {
+                                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/selected/properties/variantOptionQualifiers/items/properties/value",
+                                        "type": "string",
+                                        "title": "The Value Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "Midnight Black"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "variantType": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseOptions/items/properties/variantType",
+                              "type": "string",
+                              "title": "The Varianttype Schema",
+                              "default": "",
+                              "examples": [
+                                "ApparelSizeVariantProduct"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "baseProduct": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/baseProduct",
+                        "type": "string",
+                        "title": "The Baseproduct Schema",
+                        "default": "",
+                        "examples": [
+                          "49123810-98"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "clearance": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/clearance",
+                        "type": "boolean",
+                        "title": "The Clearance Schema",
+                        "default": false,
+                        "examples": [
+                          false
+                        ]
+                      },
+                      "code": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/code",
+                        "type": "string",
+                        "title": "The Code Schema",
+                        "default": "",
+                        "examples": [
+                          "49123829"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "colourGroupName": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/colourGroupName",
+                        "type": "string",
+                        "title": "The Colourgroupname Schema",
+                        "default": "",
+                        "examples": [
+                          "Black"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "colourId": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/colourId",
+                        "type": "string",
+                        "title": "The Colourid Schema",
+                        "default": "",
+                        "examples": [
+                          "98"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "giftCard": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/giftCard",
+                        "type": "boolean",
+                        "title": "The Giftcard Schema",
+                        "default": false,
+                        "examples": [
+                          false
+                        ]
+                      },
+                      "image": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/image",
+                        "type": "object",
+                        "title": "The Image Schema",
+                        "required": [
+                          "altText"
+                        ],
+                        "properties": {
+                          "altText": {
+                            "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/image/properties/altText",
+                            "type": "string",
+                            "title": "The Alttext Schema",
+                            "default": "",
+                            "examples": [
+                              "Lousana"
+                            ],
+                            "pattern": "^(.*)$"
+                          }
+                        }
+                      },
+                      "images": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images",
+                        "type": "array",
+                        "title": "The Images Schema",
+                        "items": {
+                          "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "altText",
+                            "format",
+                            "galleryIndex",
+                            "imageType",
+                            "url"
+                          ],
+                          "properties": {
+                            "altText": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items/properties/altText",
+                              "type": "string",
+                              "title": "The Alttext Schema",
+                              "default": "",
+                              "examples": [
+                                "lousana"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "format": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items/properties/format",
+                              "type": "string",
+                              "title": "The Format Schema",
+                              "default": "",
+                              "examples": [
+                                "thumbnail"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "galleryIndex": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items/properties/galleryIndex",
+                              "type": "integer",
+                              "title": "The Galleryindex Schema",
+                              "default": 0,
+                              "examples": [
+                                0
+                              ]
+                            },
+                            "imageType": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items/properties/imageType",
+                              "type": "string",
+                              "title": "The Imagetype Schema",
+                              "default": "",
+                              "examples": [
+                                "GALLERY"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "url": {
+                              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/images/items/properties/url",
+                              "type": "string",
+                              "title": "The Url Schema",
+                              "default": "",
+                              "examples": [
+                                "//media.aldoshoes.com/v2/product/lousana/98/lousana_black_98_main_sq_wt_70X70.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "name": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Lousana"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "onlineExclusive": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/onlineExclusive",
+                        "type": "boolean",
+                        "title": "The Onlineexclusive Schema",
+                        "default": false,
+                        "examples": [
+                          false
+                        ]
+                      },
+                      "outlet": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/outlet",
+                        "type": "boolean",
+                        "title": "The Outlet Schema",
+                        "default": false,
+                        "examples": [
+                          false
+                        ]
+                      },
+                      "purchasable": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/purchasable",
+                        "type": "boolean",
+                        "title": "The Purchasable Schema",
+                        "default": false,
+                        "examples": [
+                          true
+                        ]
+                      },
+                      "sale": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/sale",
+                        "type": "boolean",
+                        "title": "The Sale Schema",
+                        "default": false,
+                        "examples": [
+                          true
+                        ]
+                      },
+                      "stock": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/stock",
+                        "type": "object",
+                        "title": "The Stock Schema",
+                        "required": [
+                          "stockLevel",
+                          "stockLevelStatus"
+                        ],
+                        "properties": {
+                          "stockLevel": {
+                            "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/stock/properties/stockLevel",
+                            "type": "integer",
+                            "title": "The Stocklevel Schema",
+                            "default": 0,
+                            "examples": [
+                              5917
+                            ]
+                          },
+                          "stockLevelStatus": {
+                            "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/stock/properties/stockLevelStatus",
+                            "type": "string",
+                            "title": "The Stocklevelstatus Schema",
+                            "default": "",
+                            "examples": [
+                              "inStock"
+                            ],
+                            "pattern": "^(.*)$"
+                          }
+                        }
+                      },
+                      "storeID": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/storeID",
+                        "type": "integer",
+                        "title": "The Storeid Schema",
+                        "default": 0,
+                        "examples": [
+                          26
+                        ]
+                      },
+                      "url": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/product/properties/url",
+                        "type": "string",
+                        "title": "The Url Schema",
+                        "default": "",
+                        "examples": [
+                          "/Women/Handbags/Crossbody-bags/Lousana/p/49123829"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  },
+                  "quantity": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/quantity",
+                    "type": "integer",
+                    "title": "The Quantity Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "totalPrice": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/totalPrice",
+                    "type": "object",
+                    "title": "The Totalprice Schema",
+                    "required": [
+                      "currencyIso",
+                      "formattedValue",
+                      "priceType",
+                      "value"
+                    ],
+                    "properties": {
+                      "currencyIso": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/totalPrice/properties/currencyIso",
+                        "type": "string",
+                        "title": "The Currencyiso Schema",
+                        "default": "",
+                        "examples": [
+                          "CAD"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "formattedValue": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/totalPrice/properties/formattedValue",
+                        "type": "string",
+                        "title": "The Formattedvalue Schema",
+                        "default": "",
+                        "examples": [
+                          "$36.98"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "priceType": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/totalPrice/properties/priceType",
+                        "type": "string",
+                        "title": "The Pricetype Schema",
+                        "default": "",
+                        "examples": [
+                          "BUY"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "value": {
+                        "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/totalPrice/properties/value",
+                        "type": "number",
+                        "title": "The Value Schema",
+                        "default": 0.0,
+                        "examples": [
+                          36.98
+                        ]
+                      }
+                    }
+                  },
+                  "updateable": {
+                    "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/entries/items/properties/updateable",
+                    "type": "boolean",
+                    "title": "The Updateable Schema",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  }
+                }
+              }
+            },
+            "paymentInfo": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo",
+              "type": "object",
+              "title": "The Paymentinfo Schema",
+              "required": [
+                "billingAddress",
+                "cardType"
+              ],
+              "properties": {
+                "billingAddress": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress",
+                  "type": "object",
+                  "title": "The Billingaddress Schema",
+                  "required": [
+                    "country",
+                    "defaultAddress",
+                    "email",
+                    "firstName",
+                    "lastName",
+                    "line1",
+                    "postalCode",
+                    "shippingAddress",
+                    "town",
+                    "visibleInAddressBook"
+                  ],
+                  "properties": {
+                    "country": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/country",
+                      "type": "object",
+                      "title": "The Country Schema",
+                      "required": [
+                        "isocode",
+                        "name"
+                      ],
+                      "properties": {
+                        "isocode": {
+                          "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/country/properties/isocode",
+                          "type": "string",
+                          "title": "The Isocode Schema",
+                          "default": "",
+                          "examples": [
+                            "CA"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "name": {
+                          "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/country/properties/name",
+                          "type": "string",
+                          "title": "The Name Schema",
+                          "default": "",
+                          "examples": [
+                            "Canada"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    },
+                    "defaultAddress": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/defaultAddress",
+                      "type": "boolean",
+                      "title": "The Defaultaddress Schema",
+                      "default": false,
+                      "examples": [
+                        false
+                      ]
+                    },
+                    "email": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/email",
+                      "type": "string",
+                      "title": "The Email Schema",
+                      "default": "",
+                      "examples": [
+                        "aldo.ecepp.ca@gmail.com"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "firstName": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/firstName",
+                      "type": "string",
+                      "title": "The Firstname Schema",
+                      "default": "",
+                      "examples": [
+                        "aldoTest"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "lastName": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/lastName",
+                      "type": "string",
+                      "title": "The Lastname Schema",
+                      "default": "",
+                      "examples": [
+                        "aldoTest"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "line1": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/line1",
+                      "type": "string",
+                      "title": "The Line1 Schema",
+                      "default": "",
+                      "examples": [
+                        " College Street"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "postalCode": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/postalCode",
+                      "type": "string",
+                      "title": "The Postalcode Schema",
+                      "default": "",
+                      "examples": [
+                        "S7K 0V1"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "shippingAddress": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/shippingAddress",
+                      "type": "boolean",
+                      "title": "The Shippingaddress Schema",
+                      "default": false,
+                      "examples": [
+                        false
+                      ]
+                    },
+                    "town": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/town",
+                      "type": "string",
+                      "title": "The Town Schema",
+                      "default": "",
+                      "examples": [
+                        "Toronto"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "visibleInAddressBook": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/billingAddress/properties/visibleInAddressBook",
+                      "type": "boolean",
+                      "title": "The Visibleinaddressbook Schema",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    }
+                  }
+                },
+                "cardType": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/cardType",
+                  "type": "object",
+                  "title": "The Cardtype Schema",
+                  "required": [
+                    "code",
+                    "name"
+                  ],
+                  "properties": {
+                    "code": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/cardType/properties/code",
+                      "type": "string",
+                      "title": "The Code Schema",
+                      "default": "",
+                      "examples": [
+                        "paypal"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "name": {
+                      "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/paymentInfo/properties/cardType/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "PayPal"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              }
+            },
+            "subTotal": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/subTotal",
+              "type": "object",
+              "title": "The Subtotal Schema",
+              "required": [
+                "currencyIso",
+                "formattedValue",
+                "priceType",
+                "value"
+              ],
+              "properties": {
+                "currencyIso": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/subTotal/properties/currencyIso",
+                  "type": "string",
+                  "title": "The Currencyiso Schema",
+                  "default": "",
+                  "examples": [
+                    "CAD"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedValue": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/subTotal/properties/formattedValue",
+                  "type": "string",
+                  "title": "The Formattedvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "$36.98"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "priceType": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/subTotal/properties/priceType",
+                  "type": "string",
+                  "title": "The Pricetype Schema",
+                  "default": "",
+                  "examples": [
+                    "BUY"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/subTotal/properties/value",
+                  "type": "number",
+                  "title": "The Value Schema",
+                  "default": 0.0,
+                  "examples": [
+                    36.98
+                  ]
+                }
+              }
+            },
+            "totalPrice": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPrice",
+              "type": "object",
+              "title": "The Totalprice Schema",
+              "required": [
+                "currencyIso",
+                "formattedValue",
+                "priceType",
+                "value"
+              ],
+              "properties": {
+                "currencyIso": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPrice/properties/currencyIso",
+                  "type": "string",
+                  "title": "The Currencyiso Schema",
+                  "default": "",
+                  "examples": [
+                    "CAD"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedValue": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPrice/properties/formattedValue",
+                  "type": "string",
+                  "title": "The Formattedvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "$41.98"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "priceType": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPrice/properties/priceType",
+                  "type": "string",
+                  "title": "The Pricetype Schema",
+                  "default": "",
+                  "examples": [
+                    "BUY"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPrice/properties/value",
+                  "type": "number",
+                  "title": "The Value Schema",
+                  "default": 0.0,
+                  "examples": [
+                    41.98
+                  ]
+                }
+              }
+            },
+            "totalPriceWithTax": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPriceWithTax",
+              "type": "object",
+              "title": "The Totalpricewithtax Schema",
+              "required": [
+                "currencyIso",
+                "formattedValue",
+                "priceType",
+                "value"
+              ],
+              "properties": {
+                "currencyIso": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPriceWithTax/properties/currencyIso",
+                  "type": "string",
+                  "title": "The Currencyiso Schema",
+                  "default": "",
+                  "examples": [
+                    "CAD"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedValue": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPriceWithTax/properties/formattedValue",
+                  "type": "string",
+                  "title": "The Formattedvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "$46.30"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "priceType": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPriceWithTax/properties/priceType",
+                  "type": "string",
+                  "title": "The Pricetype Schema",
+                  "default": "",
+                  "examples": [
+                    "BUY"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalPriceWithTax/properties/value",
+                  "type": "number",
+                  "title": "The Value Schema",
+                  "default": 0.0,
+                  "examples": [
+                    46.3
+                  ]
+                }
+              }
+            },
+            "totalTax": {
+              "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalTax",
+              "type": "object",
+              "title": "The Totaltax Schema",
+              "required": [
+                "currencyIso",
+                "formattedValue",
+                "priceType",
+                "value"
+              ],
+              "properties": {
+                "currencyIso": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalTax/properties/currencyIso",
+                  "type": "string",
+                  "title": "The Currencyiso Schema",
+                  "default": "",
+                  "examples": [
+                    "CAD"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedValue": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalTax/properties/formattedValue",
+                  "type": "string",
+                  "title": "The Formattedvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "$4.32"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "priceType": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalTax/properties/priceType",
+                  "type": "string",
+                  "title": "The Pricetype Schema",
+                  "default": "",
+                  "examples": [
+                    "BUY"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/orderDetails/properties/hybrisOrderDetails/properties/totalTax/properties/value",
+                  "type": "number",
+                  "title": "The Value Schema",
+                  "default": 0.0,
+                  "examples": [
+                    4.32
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "omsOrderDetails": {
+          "$id": "#/properties/orderDetails/properties/omsOrderDetails",
+          "type": "object",
+          "title": "The Omsorderdetails Schema",
+          "required": [
+            "estimatedDeliveryDateMax",
+            "date",
+            "preferredLanguage",
+            "estimatedShipDateMin",
+            "orderLines",
+            "firstName",
+            "salesChannel",
+            "site",
+            "estimatedDeliveryDateMin",
+            "lastName",
+            "status",
+            "paymentAddress",
+            "paymentType",
+            "pickUpStoreID",
+            "sellerOrgCode",
+            "transactionType",
+            "originatingCountry",
+            "enteredBy",
+            "email",
+            "orderNumber",
+            "estimatedShipDateMax",
+            "deliveryAddress"
+          ],
+          "properties": {
+            "estimatedDeliveryDateMax": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/estimatedDeliveryDateMax",
+              "type": "string",
+              "title": "The Estimateddeliverydatemax Schema",
+              "default": "",
+              "examples": [
+                "20181224000000"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "date": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/date",
+              "type": "string",
+              "title": "The Date Schema",
+              "default": "",
+              "examples": [
+                "20181216221234"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "preferredLanguage": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/preferredLanguage",
+              "type": "string",
+              "title": "The Preferredlanguage Schema",
+              "default": "",
+              "examples": [
+                "ENG"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "estimatedShipDateMin": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/estimatedShipDateMin",
+              "type": "string",
+              "title": "The Estimatedshipdatemin Schema",
+              "default": "",
+              "examples": [
+                "20181218221546"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "orderLines": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines",
+              "type": "array",
+              "title": "The Orderlines Schema",
+              "items": {
+                "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                  "rmaNumber",
+                  "styleCode",
+                  "rmaQuantity",
+                  "statusQuantity",
+                  "status",
+                  "estimatedDeliveryDate",
+                  "unitPrice",
+                  "shipDate",
+                  "skuCode",
+                  "size",
+                  "trackingNumber",
+                  "style",
+                  "trackingNumberURL",
+                  "totalAmount",
+                  "quantity",
+                  "estimatedShipDate"
+                ],
+                "properties": {
+                  "rmaNumber": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/rmaNumber",
+                    "type": "string",
+                    "title": "The Rmanumber Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "styleCode": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/styleCode",
+                    "type": "string",
+                    "title": "The Stylecode Schema",
+                    "default": "",
+                    "examples": [
+                      "49123810"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "rmaQuantity": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/rmaQuantity",
+                    "type": "null",
+                    "title": "The Rmaquantity Schema",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "statusQuantity": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/statusQuantity",
+                    "type": "integer",
+                    "title": "The Statusquantity Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "status": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/status",
+                    "type": "string",
+                    "title": "The Status Schema",
+                    "default": "",
+                    "examples": [
+                      "SHIPMENT_IN_PROCESS"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "estimatedDeliveryDate": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/estimatedDeliveryDate",
+                    "type": "string",
+                    "title": "The Estimateddeliverydate Schema",
+                    "default": "",
+                    "examples": [
+                      "20181224000000"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "unitPrice": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/unitPrice",
+                    "type": "number",
+                    "title": "The Unitprice Schema",
+                    "default": 0.0,
+                    "examples": [
+                      36.98
+                    ]
+                  },
+                  "shipDate": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/shipDate",
+                    "type": "string",
+                    "title": "The Shipdate Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "skuCode": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/skuCode",
+                    "type": "string",
+                    "title": "The Skucode Schema",
+                    "default": "",
+                    "examples": [
+                      "49123829"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "size": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/size",
+                    "type": "string",
+                    "title": "The Size Schema",
+                    "default": "",
+                    "examples": [
+                      "One Size"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "trackingNumber": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/trackingNumber",
+                    "type": "string",
+                    "title": "The Trackingnumber Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "style": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/style",
+                    "type": "string",
+                    "title": "The Style Schema",
+                    "default": "",
+                    "examples": [
+                      "Midnight black"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "trackingNumberURL": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/trackingNumberURL",
+                    "type": "string",
+                    "title": "The Trackingnumberurl Schema",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "totalAmount": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/totalAmount",
+                    "type": "number",
+                    "title": "The Totalamount Schema",
+                    "default": 0.0,
+                    "examples": [
+                      36.98
+                    ]
+                  },
+                  "quantity": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/quantity",
+                    "type": "integer",
+                    "title": "The Quantity Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "estimatedShipDate": {
+                    "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderLines/items/properties/estimatedShipDate",
+                    "type": "string",
+                    "title": "The Estimatedshipdate Schema",
+                    "default": "",
+                    "examples": [
+                      "20181218221546"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            },
+            "firstName": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/firstName",
+              "type": "string",
+              "title": "The Firstname Schema",
+              "default": "",
+              "examples": [
+                "aldoTest"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "salesChannel": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/salesChannel",
+              "type": "string",
+              "title": "The Saleschannel Schema",
+              "default": "",
+              "examples": [
+                "WEB"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "site": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/site",
+              "type": "string",
+              "title": "The Site Schema",
+              "default": "",
+              "examples": [
+                "ALDO_CA"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "estimatedDeliveryDateMin": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/estimatedDeliveryDateMin",
+              "type": "string",
+              "title": "The Estimateddeliverydatemin Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            },
+            "lastName": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/lastName",
+              "type": "string",
+              "title": "The Lastname Schema",
+              "default": "",
+              "examples": [
+                "aldoTest"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "status": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/status",
+              "type": "string",
+              "title": "The Status Schema",
+              "default": "",
+              "examples": [
+                "SHIPMENT_IN_PROCESS"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "paymentAddress": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress",
+              "type": "object",
+              "title": "The Paymentaddress Schema",
+              "required": [
+                "lastName",
+                "postalCode",
+                "state",
+                "address1",
+                "address2",
+                "firstName",
+                "country",
+                "city"
+              ],
+              "properties": {
+                "lastName": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/lastName",
+                  "type": "string",
+                  "title": "The Lastname Schema",
+                  "default": "",
+                  "examples": [
+                    "aldoTest"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "postalCode": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/postalCode",
+                  "type": "string",
+                  "title": "The Postalcode Schema",
+                  "default": "",
+                  "examples": [
+                    "S7K 0V1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "state": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/state",
+                  "type": "string",
+                  "title": "The State Schema",
+                  "default": "",
+                  "examples": [
+                    "SK"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "address1": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/address1",
+                  "type": "string",
+                  "title": "The Address1 Schema",
+                  "default": "",
+                  "examples": [
+                    "College Street"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "address2": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/address2",
+                  "type": "string",
+                  "title": "The Address2 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "firstName": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/firstName",
+                  "type": "string",
+                  "title": "The Firstname Schema",
+                  "default": "",
+                  "examples": [
+                    "aldoTest"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "country": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/country",
+                  "type": "string",
+                  "title": "The Country Schema",
+                  "default": "",
+                  "examples": [
+                    "CA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "city": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentAddress/properties/city",
+                  "type": "string",
+                  "title": "The City Schema",
+                  "default": "",
+                  "examples": [
+                    "Toronto"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            },
+            "paymentType": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/paymentType",
+              "type": "string",
+              "title": "The Paymenttype Schema",
+              "default": "",
+              "examples": [
+                "PAYPAL"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "pickUpStoreID": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/pickUpStoreID",
+              "type": "string",
+              "title": "The Pickupstoreid Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            },
+            "sellerOrgCode": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/sellerOrgCode",
+              "type": "string",
+              "title": "The Sellerorgcode Schema",
+              "default": "",
+              "examples": [
+                "ALDO_CA"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "transactionType": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/transactionType",
+              "type": "string",
+              "title": "The Transactiontype Schema",
+              "default": "",
+              "examples": [
+                "0001"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "originatingCountry": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/originatingCountry",
+              "type": "string",
+              "title": "The Originatingcountry Schema",
+              "default": "",
+              "examples": [
+                "CA"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "enteredBy": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/enteredBy",
+              "type": "string",
+              "title": "The Enteredby Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            },
+            "email": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/email",
+              "type": "string",
+              "title": "The Email Schema",
+              "default": "",
+              "examples": [
+                "aldoonemoreacctest@gmail.com"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "orderNumber": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/orderNumber",
+              "type": "string",
+              "title": "The Ordernumber Schema",
+              "default": "",
+              "examples": [
+                "100736772"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "estimatedShipDateMax": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/estimatedShipDateMax",
+              "type": "string",
+              "title": "The Estimatedshipdatemax Schema",
+              "default": "",
+              "examples": [
+                "20181218221546"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "deliveryAddress": {
+              "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress",
+              "type": "object",
+              "title": "The Deliveryaddress Schema",
+              "required": [
+                "lastName",
+                "postalCode",
+                "state",
+                "address1",
+                "address2",
+                "firstName",
+                "country",
+                "city"
+              ],
+              "properties": {
+                "lastName": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/lastName",
+                  "type": "string",
+                  "title": "The Lastname Schema",
+                  "default": "",
+                  "examples": [
+                    "aldoTest"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "postalCode": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/postalCode",
+                  "type": "string",
+                  "title": "The Postalcode Schema",
+                  "default": "",
+                  "examples": [
+                    "S7K 0V1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "state": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/state",
+                  "type": "string",
+                  "title": "The State Schema",
+                  "default": "",
+                  "examples": [
+                    "SK"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "address1": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/address1",
+                  "type": "string",
+                  "title": "The Address1 Schema",
+                  "default": "",
+                  "examples": [
+                    "College Street"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "address2": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/address2",
+                  "type": "string",
+                  "title": "The Address2 Schema",
+                  "default": "",
+                  "examples": [
+                    ""
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "firstName": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/firstName",
+                  "type": "string",
+                  "title": "The Firstname Schema",
+                  "default": "",
+                  "examples": [
+                    "aldoTest"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "country": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/country",
+                  "type": "string",
+                  "title": "The Country Schema",
+                  "default": "",
+                  "examples": [
+                    "CA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "city": {
+                  "$id": "#/properties/orderDetails/properties/omsOrderDetails/properties/deliveryAddress/properties/city",
+                  "type": "string",
+                  "title": "The City Schema",
+                  "default": "",
+                  "examples": [
+                    "Toronto"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        },
+        "orderNumber": {
+          "$id": "#/properties/orderDetails/properties/orderNumber",
+          "type": "string",
+          "title": "The Ordernumber Schema",
+          "default": "",
+          "examples": [
+            "100736772"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pickUpStoreDetails": {
+          "$id": "#/properties/orderDetails/properties/pickUpStoreDetails",
+          "title": "The Pickupstoredetails Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "availableForPickup",
+    "baseOptions",
+    "baseProduct",
+    "categories",
+    "clearance",
+    "code",
+    "colourGroupName",
+    "description",
+    "gender",
+    "giftCard",
+    "image",
+    "isGenderNeutral",
+    "metaData",
+    "name",
+    "newArrival",
+    "numberOfReviews",
+    "onlineExclusive",
+    "outlet",
+    "price",
+    "priceRange",
+    "productMessage",
+    "purchasable",
+    "sale",
+    "sizeChartID",
+    "stock",
+    "url",
+    "variantOptions",
+    "socialImages",
+    "customerReviews",
+    "sizeChart"
+  ],
+  "properties": {
+    "availableForPickup": {
+      "type": "boolean",
+      "title": "The Availableforpickup Schema",
+      "default": false
+    },
+    "baseOptions": {
+      "type": "array",
+      "title": "The Baseoptions Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "options",
+          "selected",
+          "variantType"
+        ],
+        "properties": {
+          "options": {
+            "type": "array",
+            "title": "The Options Schema",
+            "items": {
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "code",
+                "priceData",
+                "stock",
+                "url",
+                "variantOptionQualifiers"
+              ]
+            }
+          },
+          "variantType": {
+            "type": "string",
+            "title": "The Varianttype Schema",
+            "default": "",
+            "examples": [
+              "ApparelStyleVariantProduct"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "baseProduct": {
+      "type": "string",
+      "title": "The Baseproduct Schema",
+      "default": "",
+      "examples": [
+        "49116311"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "categories": {
+      "type": "array",
+      "title": "The Categories Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "clearanceCategory",
+          "code",
+          "gallery",
+          "newArrivalCategory",
+          "outletCategory",
+          "saleCategory",
+          "url",
+          "visualSequencerTemplateView"
+        ]
+      }
+    },
+    "classifications": {
+      "type": "array",
+      "title": "The Classifications Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "code",
+          "features",
+          "name"
+        ]
+      }
+    },
+    "clearance": {
+      "type": "boolean",
+      "title": "The Clearance Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "code": {
+      "type": "string",
+      "title": "The Code Schema",
+      "default": "",
+      "examples": [
+        "49116311-98"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "colourGroupName": {
+      "type": "string",
+      "title": "The Colourgroupname Schema",
+      "default": "",
+      "examples": [
+        "Black"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "Draped with jewels and chains, this quilted crossbody is the height of cool."
+      ],
+      "pattern": "^(.*)$"
+    },
+    "gender": {
+      "type": "string",
+      "title": "The Gender Schema",
+      "default": "",
+      "examples": [
+        "FEMALE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "giftCard": {
+      "type": "boolean",
+      "title": "The Giftcard Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "image": {
+      "type": "object",
+      "title": "The Image Schema",
+      "required": [
+        "altText",
+        "options",
+        "srcTemplate"
+      ]
+    },
+    "isGenderNeutral": {
+      "type": "boolean",
+      "title": "The Isgenderneutral Schema",
+      "default": false
+    },
+    "metaData": {
+      "type": "array",
+      "title": "The Metadata Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "content",
+          "name"
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Lousana"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "newArrival": {
+      "type": "boolean",
+      "title": "The Newarrival Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "numberOfReviews": {
+      "type": "integer",
+      "title": "The Numberofreviews Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "onlineExclusive": {
+      "type": "boolean",
+      "title": "The Onlineexclusive Schema",
+      "default": false
+    },
+    "outlet": {
+      "type": "boolean",
+      "title": "The Outlet Schema",
+      "default": false
+    },
+    "price": {
+      "type": "object",
+      "title": "The Price Schema",
+      "required": [
+        "currencyIso",
+        "formattedValue",
+        "listPrice",
+        "listPriceFormatted",
+        "priceType",
+        "value"
+      ]
+    },
+    "priceRange": {
+      "type": "object",
+      "title": "The Pricerange Schema",
+      "required": [
+        "maxPrice"
+      ],
+      "properties": {
+        "maxPrice": {
+          "type": "object",
+          "title": "The Maxprice Schema",
+          "required": [
+            "currencyIso",
+            "formattedValue",
+            "priceType",
+            "value"
+          ]
+        }
+      }
+    },
+    "productMessage": {
+      "type": "object",
+      "title": "The Productmessage Schema"
+    },
+    "purchasable": {
+      "type": "boolean",
+      "title": "The Purchasable Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "sale": {
+      "type": "boolean",
+      "title": "The Sale Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "sizeChartID": {
+      "type": "string",
+      "title": "The Sizechartid Schema",
+      "default": "",
+      "examples": [
+        "-1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "stock": {
+      "type": "object",
+      "title": "The Stock Schema",
+      "required": [
+        "stockLevel",
+        "stockLevelStatus"
+      ]
+      }
+    },
+    "url": {
+      "type": "string",
+      "title": "The Url Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "variantOptions": {
+      "type": "array",
+      "title": "The Variantoptions Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "code",
+          "priceData",
+          "stock",
+          "url",
+          "variantOptionQualifiers",
+          "width"
+        ]
+      }
+    },
+    "socialImages": {
+      "type": "array",
+      "title": "The Socialimages Schema"
+    },
+    "customerReviews": {
+      "type": "object",
+      "title": "The Customerreviews Schema",
+      "required": [
+        "reviews",
+        "stats",
+        "vendorStatusOk"
+      ]
+    },
+    "sizeChart": {
+      "type": "null",
+      "title": "The Sizechart Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "collection": {
+      "type": "object",
+      "title": "The Collection Schema",
+      "required": [
+        "clearanceCategory",
+        "code",
+        "gallery",
+        "newArrivalCategory",
+        "outletCategory",
+        "saleCategory",
+        "url",
+        "visualSequencerTemplateView",
+        "title",
+        "template-id",
+        "sampleProducts"
+      ]
+  }
+}

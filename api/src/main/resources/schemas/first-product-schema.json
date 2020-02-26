@@ -1,0 +1,387 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "properties": {
+    "200": {
+      "$id": "#/properties/200",
+      "type": "object",
+      "title": "The 200 Schema",
+      "required": [
+        "availableForPickup",
+        "clearance",
+        "code",
+        "colourGroupName",
+        "description",
+        "giftCard",
+        "image",
+        "mainCategory",
+        "name",
+        "newArrival",
+        "onlineExclusive",
+        "outlet",
+        "price",
+        "sale",
+        "stock",
+        "url"
+      ],
+      "properties": {
+        "availableForPickup": {
+          "$id": "#/properties/200/properties/availableForPickup",
+          "type": "boolean",
+          "title": "The Availableforpickup Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "clearance": {
+          "$id": "#/properties/200/properties/clearance",
+          "type": "boolean",
+          "title": "The Clearance Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "code": {
+          "$id": "#/properties/200/properties/code",
+          "type": "string",
+          "title": "The Code Schema",
+          "default": "",
+          "examples": [
+            "33321433-18"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "colourGroupName": {
+          "$id": "#/properties/200/properties/colourGroupName",
+          "type": "string",
+          "title": "The Colourgroupname Schema",
+          "default": "",
+          "examples": [
+            "Grey"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "description": {
+          "$id": "#/properties/200/properties/description",
+          "type": "string",
+          "title": "The Description Schema",
+          "default": "",
+          "examples": [
+            "Hit the streets in fashion with this luxurious pair of leather gloves. Easily paired to any coat."
+          ],
+          "pattern": "^(.*)$"
+        },
+        "giftCard": {
+          "$id": "#/properties/200/properties/giftCard",
+          "type": "boolean",
+          "title": "The Giftcard Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "image": {
+          "$id": "#/properties/200/properties/image",
+          "type": "object",
+          "title": "The Image Schema",
+          "required": [
+            "altText",
+            "options",
+            "srcTemplate"
+          ],
+          "properties": {
+            "altText": {
+              "$id": "#/properties/200/properties/image/properties/altText",
+              "type": "string",
+              "title": "The Alttext Schema",
+              "default": "",
+              "examples": [
+                "Wistanus"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "options": {
+              "$id": "#/properties/200/properties/image/properties/options",
+              "type": "array",
+              "title": "The Options Schema",
+              "items": {
+                "$id": "#/properties/200/properties/image/properties/options/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                  "backgrounds",
+                  "code",
+                  "type"
+                ],
+                "properties": {
+                  "backgrounds": {
+                    "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds",
+                    "type": "array",
+                    "title": "The Backgrounds Schema",
+                    "items": {
+                      "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items",
+                      "type": "object",
+                      "title": "The Items Schema",
+                      "required": [
+                        "background",
+                        "dimension"
+                      ],
+                      "properties": {
+                        "background": {
+                          "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items/properties/background",
+                          "type": "string",
+                          "title": "The Background Schema",
+                          "default": "",
+                          "examples": [
+                            "gy"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "dimension": {
+                          "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items/properties/dimension",
+                          "type": "array",
+                          "title": "The Dimension Schema",
+                          "items": {
+                            "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items/properties/dimension/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "required": [
+                              "h",
+                              "w"
+                            ],
+                            "properties": {
+                              "h": {
+                                "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items/properties/dimension/items/properties/h",
+                                "type": "string",
+                                "title": "The H Schema",
+                                "default": "",
+                                "examples": [
+                                  "445"
+                                ],
+                                "pattern": "^(.*)$"
+                              },
+                              "w": {
+                                "$id": "#/properties/200/properties/image/properties/options/items/properties/backgrounds/items/properties/dimension/items/properties/w",
+                                "type": "string",
+                                "title": "The W Schema",
+                                "default": "",
+                                "examples": [
+                                  "350"
+                                ],
+                                "pattern": "^(.*)$"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "code": {
+                    "$id": "#/properties/200/properties/image/properties/options/items/properties/code",
+                    "type": "string",
+                    "title": "The Code Schema",
+                    "default": "",
+                    "examples": [
+                      "33321433-18_main"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "type": {
+                    "$id": "#/properties/200/properties/image/properties/options/items/properties/type",
+                    "type": "string",
+                    "title": "The Type Schema",
+                    "default": "",
+                    "examples": [
+                      "main"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            },
+            "srcTemplate": {
+              "$id": "#/properties/200/properties/image/properties/srcTemplate",
+              "type": "string",
+              "title": "The Srctemplate Schema",
+              "default": "",
+              "examples": [
+                "//media.aldoshoes.com/v2/product/wistanus/18/wistanus_grey_18_[type]_[proportion]_[background]_[dimension].jpg"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "mainCategory": {
+          "$id": "#/properties/200/properties/mainCategory",
+          "type": "string",
+          "title": "The Maincategory Schema",
+          "default": "",
+          "examples": [
+            "3234"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "name": {
+          "$id": "#/properties/200/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "Wistanus"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "newArrival": {
+          "$id": "#/properties/200/properties/newArrival",
+          "type": "boolean",
+          "title": "The Newarrival Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "onlineExclusive": {
+          "$id": "#/properties/200/properties/onlineExclusive",
+          "type": "boolean",
+          "title": "The Onlineexclusive Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "outlet": {
+          "$id": "#/properties/200/properties/outlet",
+          "type": "boolean",
+          "title": "The Outlet Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "price": {
+          "$id": "#/properties/200/properties/price",
+          "type": "object",
+          "title": "The Price Schema",
+          "required": [
+            "currencyIso",
+            "formattedValue",
+            "listPrice",
+            "listPriceFormatted",
+            "priceType",
+            "value"
+          ],
+          "properties": {
+            "currencyIso": {
+              "$id": "#/properties/200/properties/price/properties/currencyIso",
+              "type": "string",
+              "title": "The Currencyiso Schema",
+              "default": "",
+              "examples": [
+                "USD"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "formattedValue": {
+              "$id": "#/properties/200/properties/price/properties/formattedValue",
+              "type": "string",
+              "title": "The Formattedvalue Schema",
+              "default": "",
+              "examples": [
+                "$31.98"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "listPrice": {
+              "$id": "#/properties/200/properties/price/properties/listPrice",
+              "type": "integer",
+              "title": "The Listprice Schema",
+              "default": 0,
+              "examples": [
+                40
+              ]
+            },
+            "listPriceFormatted": {
+              "$id": "#/properties/200/properties/price/properties/listPriceFormatted",
+              "type": "string",
+              "title": "The Listpriceformatted Schema",
+              "default": "",
+              "examples": [
+                "$40.00"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "priceType": {
+              "$id": "#/properties/200/properties/price/properties/priceType",
+              "type": "string",
+              "title": "The Pricetype Schema",
+              "default": "",
+              "examples": [
+                "BUY"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "value": {
+              "$id": "#/properties/200/properties/price/properties/value",
+              "type": "number",
+              "title": "The Value Schema",
+              "default": 0.0,
+              "examples": [
+                31.98
+              ]
+            }
+          }
+        },
+        "sale": {
+          "$id": "#/properties/200/properties/sale",
+          "type": "boolean",
+          "title": "The Sale Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "stock": {
+          "$id": "#/properties/200/properties/stock",
+          "type": "object",
+          "title": "The Stock Schema",
+          "properties": {
+            "stockLevel": {
+              "$id": "#/properties/200/properties/stock/properties/stockLevel",
+              "type": "integer",
+              "title": "The Stocklevel Schema",
+              "default": 0,
+              "examples": [
+                36
+              ]
+            },
+            "stockLevelStatus": {
+              "$id": "#/properties/200/properties/stock/properties/stockLevelStatus",
+              "type": "string",
+              "title": "The Stocklevelstatus Schema",
+              "default": "",
+              "examples": [
+                "inStock"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "url": {
+          "$id": "#/properties/200/properties/url",
+          "type": "string",
+          "title": "The Url Schema",
+          "default": "",
+          "examples": [
+            "/Men/Bags-%26-accessories/Hats%2C-scarves-%26-gloves/Gloves/Wistanus/p/33321433-18"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}

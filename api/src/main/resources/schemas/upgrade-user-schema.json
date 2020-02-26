@@ -1,0 +1,215 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "firstName",
+    "userId",
+    "userUuid",
+    "loanApplications",
+    "loansInReview",
+    "loanAccountSummaryAto"
+  ],
+  "properties": {
+    "firstName": {
+      "$id": "#/properties/firstName",
+      "type": "string",
+      "title": "The Firstname Schema",
+      "default": "",
+      "examples": [
+        "Ian"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "userId": {
+      "$id": "#/properties/userId",
+      "type": "integer",
+      "title": "The Userid Schema",
+      "default": 0,
+      "examples": [
+        9114917
+      ]
+    },
+    "userUuid": {
+      "$id": "#/properties/userUuid",
+      "type": "string",
+      "title": "The Useruuid Schema",
+      "default": "",
+      "examples": [
+        "34c16f53-38c4-461a-bd14-11fa748d2663"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "loanApplications": {
+      "$id": "#/properties/loanApplications",
+      "type": "array",
+      "title": "The Loanapplications Schema"
+    },
+    "loansInReview": {
+      "$id": "#/properties/loansInReview",
+      "type": "array",
+      "title": "The Loansinreview Schema",
+      "items": {
+        "$id": "#/properties/loansInReview/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "uuid",
+          "status",
+          "productType",
+          "sourceSystem",
+          "hasOpenBackendCounter",
+          "purpose",
+          "createDate",
+          "postIssuanceStatus"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/loansInReview/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              9545966
+            ]
+          },
+          "uuid": {
+            "$id": "#/properties/loansInReview/items/properties/uuid",
+            "type": "string",
+            "title": "The Uuid Schema",
+            "default": "",
+            "examples": [
+              "230ea84a-7199-41c9-bf38-fff27e35970d"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "status": {
+            "$id": "#/properties/loansInReview/items/properties/status",
+            "type": "string",
+            "title": "The Status Schema",
+            "default": "",
+            "examples": [
+              "PENDING"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "productType": {
+            "$id": "#/properties/loansInReview/items/properties/productType",
+            "type": "string",
+            "title": "The Producttype Schema",
+            "default": "",
+            "examples": [
+              "PERSONAL_LOAN"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "sourceSystem": {
+            "$id": "#/properties/loansInReview/items/properties/sourceSystem",
+            "type": "string",
+            "title": "The Sourcesystem Schema",
+            "default": "",
+            "examples": [
+              "BORROWER_FUNNEL_V2"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "hasOpenBackendCounter": {
+            "$id": "#/properties/loansInReview/items/properties/hasOpenBackendCounter",
+            "type": "boolean",
+            "title": "The Hasopenbackendcounter Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "purpose": {
+            "$id": "#/properties/loansInReview/items/properties/purpose",
+            "type": "string",
+            "title": "The Purpose Schema",
+            "default": "",
+            "examples": [
+              "CREDIT_CARD"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "createDate": {
+            "$id": "#/properties/loansInReview/items/properties/createDate",
+            "type": "string",
+            "title": "The Createdate Schema",
+            "default": "",
+            "examples": [
+              "2019-08-21T18:18:59.959Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "postIssuanceStatus": {
+            "$id": "#/properties/loansInReview/items/properties/postIssuanceStatus",
+            "type": "null",
+            "title": "The Postissuancestatus Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          }
+        }
+      }
+    },
+    "loanAccountSummaryAto": {
+      "$id": "#/properties/loanAccountSummaryAto",
+      "type": "array",
+      "title": "The Loanaccountsummaryato Schema",
+      "items": {
+        "$id": "#/properties/loanAccountSummaryAto/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "loanAccountNumber",
+          "postIssuanceLoanStatus",
+          "daysPastDue",
+          "loanProductType"
+        ],
+        "properties": {
+          "loanAccountNumber": {
+            "$id": "#/properties/loanAccountSummaryAto/items/properties/loanAccountNumber",
+            "type": "null",
+            "title": "The Loanaccountnumber Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "postIssuanceLoanStatus": {
+            "$id": "#/properties/loanAccountSummaryAto/items/properties/postIssuanceLoanStatus",
+            "type": "null",
+            "title": "The Postissuanceloanstatus Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "daysPastDue": {
+            "$id": "#/properties/loanAccountSummaryAto/items/properties/daysPastDue",
+            "type": "integer",
+            "title": "The Dayspastdue Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "loanProductType": {
+            "$id": "#/properties/loanAccountSummaryAto/items/properties/loanProductType",
+            "type": "null",
+            "title": "The Loanproducttype Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          }
+        }
+      }
+    }
+  }
+}

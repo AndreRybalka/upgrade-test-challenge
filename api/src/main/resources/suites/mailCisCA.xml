@@ -1,0 +1,21 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test" verbose="1" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="core.annotations.TransformerListener"/>
+    </listeners>
+
+    <test name="ResetPassword">
+        <classes>
+            <class name="tests.emails.ResetPasswordCIS_CA"/>
+        </classes>
+    </test>
+
+    <test name="CreateAccount">
+        <classes>
+            <class name="tests.emails.CreateAccountCIS_CA"/>
+        </classes>
+    </test>
+
+</suite>

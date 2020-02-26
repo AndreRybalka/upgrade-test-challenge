@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Default">
+    <listeners>
+        <listener class-name="core.annotations.TransformerListener"/>
+        <listener class-name="core.AlterSuiteListenerGlobo"/>
+    </listeners>
+
+    <test name="Log in Sign Up tests">
+        <packages>
+            <package name="smoke.login_signup.*"/>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,237 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "predictions",
+    "status"
+  ],
+  "properties": {
+    "predictions": {
+      "$id": "#/properties/predictions",
+      "type": "array",
+      "title": "The Predictions Schema",
+      "items": {
+        "$id": "#/properties/predictions/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "description",
+          "id",
+          "matched_substrings",
+          "place_id",
+          "reference",
+          "structured_formatting",
+          "terms",
+          "types"
+        ],
+        "properties": {
+          "description": {
+            "$id": "#/properties/predictions/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "Montreal, QC, Canada"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "id": {
+            "$id": "#/properties/predictions/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "64f76606728b9536f3b6f03703a296affd47ca6c"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "matched_substrings": {
+            "$id": "#/properties/predictions/items/properties/matched_substrings",
+            "type": "array",
+            "title": "The Matched_substrings Schema",
+            "items": {
+              "$id": "#/properties/predictions/items/properties/matched_substrings/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "length",
+                "offset"
+              ],
+              "properties": {
+                "length": {
+                  "$id": "#/properties/predictions/items/properties/matched_substrings/items/properties/length",
+                  "type": "integer",
+                  "title": "The Length Schema",
+                  "default": 0,
+                  "examples": [
+                    6
+                  ]
+                },
+                "offset": {
+                  "$id": "#/properties/predictions/items/properties/matched_substrings/items/properties/offset",
+                  "type": "integer",
+                  "title": "The Offset Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              }
+            }
+          },
+          "place_id": {
+            "$id": "#/properties/predictions/items/properties/place_id",
+            "type": "string",
+            "title": "The Place_id Schema",
+            "default": "",
+            "examples": [
+              "ChIJDbdkHFQayUwR7-8fITgxTmU"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "reference": {
+            "$id": "#/properties/predictions/items/properties/reference",
+            "type": "string",
+            "title": "The Reference Schema",
+            "default": "",
+            "examples": [
+              "ChIJDbdkHFQayUwR7-8fITgxTmU"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "structured_formatting": {
+            "$id": "#/properties/predictions/items/properties/structured_formatting",
+            "type": "object",
+            "title": "The Structured_formatting Schema",
+            "required": [
+              "main_text",
+              "main_text_matched_substrings",
+              "secondary_text"
+            ],
+            "properties": {
+              "main_text": {
+                "$id": "#/properties/predictions/items/properties/structured_formatting/properties/main_text",
+                "type": "string",
+                "title": "The Main_text Schema",
+                "default": "",
+                "examples": [
+                  "Montreal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "main_text_matched_substrings": {
+                "$id": "#/properties/predictions/items/properties/structured_formatting/properties/main_text_matched_substrings",
+                "type": "array",
+                "title": "The Main_text_matched_substrings Schema",
+                "items": {
+                  "$id": "#/properties/predictions/items/properties/structured_formatting/properties/main_text_matched_substrings/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "length",
+                    "offset"
+                  ],
+                  "properties": {
+                    "length": {
+                      "$id": "#/properties/predictions/items/properties/structured_formatting/properties/main_text_matched_substrings/items/properties/length",
+                      "type": "integer",
+                      "title": "The Length Schema",
+                      "default": 0,
+                      "examples": [
+                        6
+                      ]
+                    },
+                    "offset": {
+                      "$id": "#/properties/predictions/items/properties/structured_formatting/properties/main_text_matched_substrings/items/properties/offset",
+                      "type": "integer",
+                      "title": "The Offset Schema",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    }
+                  }
+                }
+              },
+              "secondary_text": {
+                "$id": "#/properties/predictions/items/properties/structured_formatting/properties/secondary_text",
+                "type": "string",
+                "title": "The Secondary_text Schema",
+                "default": "",
+                "examples": [
+                  "QC, Canada"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "terms": {
+            "$id": "#/properties/predictions/items/properties/terms",
+            "type": "array",
+            "title": "The Terms Schema",
+            "items": {
+              "$id": "#/properties/predictions/items/properties/terms/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "offset",
+                "value"
+              ],
+              "properties": {
+                "offset": {
+                  "$id": "#/properties/predictions/items/properties/terms/items/properties/offset",
+                  "type": "integer",
+                  "title": "The Offset Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "value": {
+                  "$id": "#/properties/predictions/items/properties/terms/items/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema",
+                  "default": "",
+                  "examples": [
+                    "Montreal"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "types": {
+            "$id": "#/properties/predictions/items/properties/types",
+            "type": "array",
+            "title": "The Types Schema",
+            "items": {
+              "$id": "#/properties/predictions/items/properties/types/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "locality",
+                "political",
+                "geocode"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The Status Schema",
+      "default": "",
+      "examples": [
+        "OK"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

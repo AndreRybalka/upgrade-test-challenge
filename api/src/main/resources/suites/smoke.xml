@@ -1,0 +1,99 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test" verbose="1" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="core.annotations.TransformerListener"/>
+    </listeners>
+
+    <test name="Auth">
+        <classes>
+            <class name="tests.auth.Auth"/>
+        </classes>
+    </test>
+
+    <test name="Categories">
+        <classes>
+            <class name="tests.categories.Categories"/>
+        </classes>
+    </test>
+
+    <test name="Address">
+        <classes>
+            <class name="tests.address.Address"/>
+        </classes>
+    </test>
+
+    <test name="Cart">
+        <classes>
+            <class name="tests.cart.Cart"/>
+        </classes>
+    </test>
+
+    <test name="User">
+        <classes>
+            <class name="tests.user.User"/>
+        </classes>
+    </test>
+
+    <test name="Store">
+        <classes>
+            <class name="tests.store.Store"/>
+        </classes>
+    </test>
+
+    <test name="Site">
+        <classes>
+            <class name="tests.site.Site"/>
+        </classes>
+    </test>
+
+    <test name="Recommendations">
+        <classes>
+            <class name="tests.recommendations.Recommendations"/>
+        </classes>
+    </test>
+
+    <test name="Orders">
+        <classes>
+            <class name="tests.order.Orders"/>
+        </classes>
+    </test>
+
+    <test name="Pages">
+        <classes>
+            <class name="tests.pages.Pages"/>
+        </classes>
+    </test>
+
+    <test name="Products">
+        <classes>
+            <class name="tests.products.Products"/>
+        </classes>
+    </test>
+
+    <test name="Places">
+        <classes>
+            <class name="tests.places.Places"/>
+        </classes>
+    </test>
+
+    <test name="References">
+        <classes>
+            <class name="tests.references.References"/>
+        </classes>
+    </test>
+
+    <test name="ResetPassword">
+        <classes>
+            <class name="tests.emails.ResetPasswordALDO"/>
+        </classes>
+    </test>
+
+    <test name="CreateAccount">
+        <classes>
+            <class name="tests.emails.CreateAccountALDO"/>
+        </classes>
+    </test>
+
+</suite>

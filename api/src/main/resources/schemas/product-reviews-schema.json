@@ -1,0 +1,202 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "reviews",
+    "stats",
+    "vendorStatusOk"
+  ],
+  "properties": {
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "SubmissionTime",
+          "Title",
+          "ReviewText",
+          "UserNickname",
+          "Rating",
+          "UserLocation",
+          "Id",
+          "Photos",
+          "Badges",
+          "SecondaryRatings",
+          "AuthorId",
+          "BadgesOrder",
+          "ClientResponses",
+          "ContentLocale",
+          "CommentIds",
+          "ProductId",
+          "TagDimensions",
+          "TotalClientResponseCount",
+          "TotalCommentCount",
+          "TotalNegativeFeedbackCount",
+          "TotalPositiveFeedbackCount",
+          "Videos"
+        ],
+        "properties": {
+          "SubmissionTime": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Title": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "ReviewText": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "UserNickname": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Rating": {
+            "type": "integer"
+          },
+          "UserLocation": {
+            "type": "null"
+          },
+          "Id": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Photos": {
+            "type": "array"
+          },
+          "Badges": {
+            "type": "object"
+          },
+          "SecondaryRatings": {
+            "type": "object",
+            "required": [
+              "ImageAccuracy"
+            ],
+            "properties": {
+              "ImageAccuracy": {
+                "type": "object",
+                "required": [
+                  "Value",
+                  "Id",
+                  "ValueLabel",
+                  "MaxLabel",
+                  "DisplayType",
+                  "Label",
+                  "ValueRange",
+                  "MinLabel"
+                ]
+              }
+            }
+          },
+          "AuthorId": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "BadgesOrder": {
+            "type": "array"
+          },
+          "ClientResponses": {
+            "type": "array"
+          },
+          "ContentLocale": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "CommentIds": {
+            "type": "array"
+          },
+          "ProductId": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "TagDimensions": {
+            "type": "object"
+          },
+          "TotalClientResponseCount": {
+            "type": "integer"
+          },
+          "TotalCommentCount": {
+            "type": "integer"
+          },
+          "TotalNegativeFeedbackCount": {
+            "type": "integer"
+          },
+          "TotalPositiveFeedbackCount": {
+            "type": "integer"
+          },
+          "Videos": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "stats": {
+      "$id": "#/properties/stats",
+      "type": "object",
+      "required": [
+        "AverageOverallRating",
+        "OverallRatingRange",
+        "TotalReviewCount",
+        "SecondaryRatingsAverages"
+      ],
+      "properties": {
+        "AverageOverallRating": {
+          "type": "number"
+        },
+        "OverallRatingRange": {
+          "type": "integer"
+        },
+        "TotalReviewCount": {
+          "type": "integer"
+        },
+        "SecondaryRatingsAverages": {
+          "type": "object",
+          "required": [
+            "ImageAccuracy"
+          ],
+          "properties": {
+            "ImageAccuracy": {
+              "type": "object",
+              "required": [
+                "Id",
+                "AverageRating",
+                "DisplayType",
+                "ValueRange",
+                "MinLabel",
+                "MaxLabel"
+              ],
+              "properties": {
+                "Id": {
+                  "type": "string",
+                  "pattern": "^(.*)$"
+                },
+                "AverageRating": {
+                  "type": "number"
+                },
+                "DisplayType": {
+                  "type": "string",
+                  "pattern": "^(.*)$"
+                },
+                "ValueRange": {
+                  "type": "integer"
+                },
+                "MinLabel": {
+                  "type": "null"
+                },
+                "MaxLabel": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "vendorStatusOk": {
+      "type": "boolean"
+    }
+  }
+}

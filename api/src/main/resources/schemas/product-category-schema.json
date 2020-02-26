@@ -1,0 +1,216 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "products",
+    "pagination",
+    "spellingSuggestion",
+    "availableFilters",
+    "keywordRedirectUrl",
+    "category"
+  ],
+  "properties": {
+    "products": {
+      "type": "array",
+      "title": "The Products Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "code",
+          "mainCategory",
+          "name",
+          "onlineExclusive",
+          "outlet",
+          "price",
+          "sale",
+          "stock",
+          "url",
+          "social"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "The Code Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "description": {
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "mainCategory": {
+            "type": "string",
+            "title": "The Maincategory Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "onlineExclusive": {
+            "type": "boolean",
+            "title": "The Onlineexclusive Schema",
+            "default": false
+          },
+          "outlet": {
+            "type": "boolean",
+            "title": "The Outlet Schema",
+            "default": false
+          },
+          "price": {
+            "type": "object",
+            "title": "The Price Schema"
+          },
+          "sale": {
+            "type": "boolean",
+            "title": "The Sale Schema",
+            "default": false
+          },
+          "stock": {
+            "type": "object",
+            "title": "The Stock Schema"
+          },
+          "url": {
+            "type": "string",
+            "title": "The Url Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "social": {
+            "type": "object",
+            "title": "The Social Schema"
+          }
+        }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "title": "The Pagination Schema",
+      "required": [
+        "currentFilters",
+        "currentPage",
+        "pageSize",
+        "sort",
+        "totalPages",
+        "totalResults"
+      ],
+      "properties": {
+        "currentFilters": {
+          "type": "array",
+          "title": "The Currentfilters Schema"
+        },
+        "currentPage": {
+          "type": "integer",
+          "title": "The Currentpage Schema",
+          "default": 0
+        },
+        "pageSize": {
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0
+        },
+        "sort": {
+          "type": "string",
+          "title": "The Sort Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "totalPages": {
+          "type": "integer",
+          "title": "The Totalpages Schema",
+          "default": 0
+        },
+        "totalResults": {
+          "type": "integer",
+          "title": "The Totalresults Schema",
+          "default": 0
+        }
+      }
+    },
+    "spellingSuggestion": {
+      "type": "null",
+      "title": "The Spellingsuggestion Schema",
+      "default": null
+    },
+    "availableFilters": {
+      "type": "array",
+      "title": "The Availablefilters Schema",
+      "items": {
+        "type": "object",
+        "title": "The Items Schema"
+      }
+    },
+    "keywordRedirectUrl": {
+      "type": "null",
+      "title": "The Keywordredirecturl Schema",
+      "default": null
+    },
+    "category": {
+      "type": "object",
+      "title": "The Category Schema",
+      "required": [
+        "lastModified",
+        "url",
+        "clearanceCategory",
+        "currentPage",
+        "newArrivalCategory",
+        "numberOfPages",
+        "outletCategory",
+        "pageSize"
+      ],
+      "properties": {
+        "lastModified": {
+          "type": "string",
+          "title": "The Lastmodified Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "type": "string",
+          "title": "The Url Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "clearanceCategory": {
+          "type": "boolean",
+          "title": "The Clearancecategory Schema",
+          "default": false
+        },
+        "currentPage": {
+          "type": "integer",
+          "title": "The Currentpage Schema",
+          "default": 0
+        },
+        "newArrivalCategory": {
+          "type": "boolean",
+          "title": "The Newarrivalcategory Schema",
+          "default": false
+        },
+        "numberOfPages": {
+          "type": "integer",
+          "title": "The Numberofpages Schema",
+          "default": 0
+        },
+        "outletCategory": {
+          "type": "boolean",
+          "title": "The Outletcategory Schema",
+          "default": false
+        },
+        "pageSize": {
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0
+        }
+      }
+    }
+  }
+}

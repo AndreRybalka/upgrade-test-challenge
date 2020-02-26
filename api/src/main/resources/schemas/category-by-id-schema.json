@@ -1,0 +1,121 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "ca/en",
+    "ca/fr",
+    "us/en_US",
+    "us/es_US",
+    "uk/en_UK",
+    "eu/en_EU",
+    "eu/de_EU",
+    "de/de_EU",
+    "fr/fr_FR",
+    "it/it_IT"
+  ],
+  "properties": {
+    "ca/en": {
+      "$id": "#/properties/ca/en",
+      "type": "string",
+      "title": "The Ca/en Schema",
+      "default": "",
+      "examples": [
+        "women"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "ca/fr": {
+      "$id": "#/properties/ca/fr",
+      "type": "string",
+      "title": "The Ca/fr Schema",
+      "default": "",
+      "examples": [
+        "femmes"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "us/en_US": {
+      "$id": "#/properties/us/en_US",
+      "type": "string",
+      "title": "The Us/en_us Schema",
+      "default": "",
+      "examples": [
+        "women"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "us/es_US": {
+      "$id": "#/properties/us/es_US",
+      "type": "string",
+      "title": "The Us/es_us Schema",
+      "default": "",
+      "examples": [
+        "mujeres"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "uk/en_UK": {
+      "$id": "#/properties/uk/en_UK",
+      "type": "string",
+      "title": "The Uk/en_uk Schema",
+      "default": "",
+      "examples": [
+        "women"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "eu/en_EU": {
+      "$id": "#/properties/eu/en_EU",
+      "type": "string",
+      "title": "The Eu/en_eu Schema",
+      "default": "",
+      "examples": [
+        "women"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "eu/de_EU": {
+      "$id": "#/properties/eu/de_EU",
+      "type": "string",
+      "title": "The Eu/de_eu Schema",
+      "default": "",
+      "examples": [
+        "damen"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "de/de_EU": {
+      "$id": "#/properties/de/de_EU",
+      "type": "string",
+      "title": "The De/de_eu Schema",
+      "default": "",
+      "examples": [
+        "damen"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "fr/fr_FR": {
+      "$id": "#/properties/fr/fr_FR",
+      "type": "string",
+      "title": "The Fr/fr_fr Schema",
+      "default": "",
+      "examples": [
+        "femmes"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "it/it_IT": {
+      "$id": "#/properties/it/it_IT",
+      "type": "string",
+      "title": "The It/it_it Schema",
+      "default": "",
+      "examples": [
+        "donna"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

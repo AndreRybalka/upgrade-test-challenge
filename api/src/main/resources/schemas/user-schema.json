@@ -1,0 +1,108 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "profile",
+    "cart",
+    "csrfToken"
+  ],
+  "properties": {
+    "profile": {
+      "$id": "#/properties/profile",
+      "type": "object",
+      "title": "The Profile Schema",
+      "required": [
+        "type",
+        "creationTime",
+        "displayUid",
+        "firstName",
+        "lastName"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/profile/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "userWsDTO"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "creationTime": {
+          "$id": "#/properties/profile/properties/creationTime",
+          "type": "string",
+          "title": "The Creationtime Schema",
+          "default": "",
+          "examples": [
+            "2018-05-08T03:52:03-0400"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "displayUid": {
+          "$id": "#/properties/profile/properties/displayUid",
+          "type": "string",
+          "title": "The Displayuid Schema",
+          "default": "",
+          "examples": [
+            "aldothirdacc@gmail.com"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "firstName": {
+          "$id": "#/properties/profile/properties/firstName",
+          "type": "string",
+          "title": "The Firstname Schema",
+          "default": "",
+          "examples": [
+            "aldoTest"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "lastName": {
+          "$id": "#/properties/profile/properties/lastName",
+          "type": "string",
+          "title": "The Lastname Schema",
+          "default": "",
+          "examples": [
+            "aldoTest"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "cart": {
+      "$id": "#/properties/cart",
+      "type": "object",
+      "title": "The Cart Schema",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/cart/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "cartWsDTO"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "csrfToken": {
+      "$id": "#/properties/csrfToken",
+      "type": "string",
+      "title": "The Csrftoken Schema",
+      "default": "",
+      "examples": [
+        "$2a$09$tsMqYzwmpSZn0daHAeiEeey4i0siJUdo.06gVleO3W/yyQZ23aYTq"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="all payments tests" parallel="tests" thread-count="3" allow-return-values="true">
+
+    <listeners>
+        <listener class-name="core.annotations.TransformerListener"/>
+        <listener class-name="core.AlterSuiteListenerGlobo"/>
+    </listeners>
+
+    <test name="Payments for authorized user">
+        <packages>
+            <package name="smoke.payment.autorizeduserpayments.*"/>
+        </packages>
+    </test>
+
+    <test name="Payments for unauthorized user">
+        <packages>
+            <package name="smoke.payment.notautorizeduserpayments.*"/>
+        </packages>
+    </test>
+
+    <test name="Saved  payments">
+        <packages>
+            <package name="smoke.payment.savedpayments.*"/>
+        </packages>
+    </test>
+
+    <test name="Promo codes and taxes">
+        <packages>
+            <package name="smoke.promo.*"/>
+        </packages>
+    </test>
+
+    <test name="Shipping and fields length validation">
+        <packages>
+            <package name="smoke.shipping.*"/>
+        </packages>
+    </test>
+
+</suite>
