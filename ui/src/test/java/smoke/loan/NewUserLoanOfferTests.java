@@ -53,7 +53,6 @@ public class NewUserLoanOfferTests extends AbstractBaseTest {
 
         stepInfo("Enter income");
         urlToLeave = personalInformationPage.getPageUrl();
-        log(urlToLeave);
         personalInformationPage.inputIncomeValues();
         waitForUrlToBeChanged(urlToLeave);
 
