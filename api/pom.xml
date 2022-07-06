@@ -19,7 +19,7 @@
         <fluent-hc.version>4.5.5</fluent-hc.version>
         <oltu.oauth2.version>1.0.2</oltu.oauth2.version>
         <com.jayway.restassured>2.9.0</com.jayway.restassured>
-        <org.apache-extras.beanshell>2.0b5</org.apache-extras.beanshell>
+        <org.apache-extras.beanshell>2.0b6</org.apache-extras.beanshell>
     </properties>
 
     <dependencies>
